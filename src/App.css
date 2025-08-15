@@ -1,0 +1,310 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  background: #005f69; /* Teal for Lamlight-Grp */
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #ffd700; /* Gold hover effect */
+}
+
+/* Hero Section */
+.hero {
+  /* Replace 'hero-bg.jpg' with your background image */
+  background: url('./assets//hero1-mobile.png') no-repeat center center/cover;
+  padding: 80px 0;
+  text-align: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 95, 105, 0.5); /* Teal overlay for contrast */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: #ffd700; /* Gold buttons */
+  color: #005f69; /* Teal text */
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e6c200; /* Darker gold on hover */
+}
+
+/* Section Styling */
+.section {
+  padding: 60px 0;
+}
+
+.section h2 {
+  font-size: 36px;
+  color: #005f69;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+.tracking-section {
+  /* Replace 'tracking-bg.jpg' with your background image */
+  background: url('./assets//hero1-mobile.png') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.shipping-section {
+  /* Replace 'shipping-bg.jpg' with your background image */
+  background: url('./assets//hero1-mobile.png') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.support-section {
+  /* Replace 'support-bg.jpg' with your background image */
+  background: url('./assets//hero1-mobile.png') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.account-section {
+  /* Replace 'account-bg.jpg' with your background image */
+  background: url('./assets//hero1-mobile.png') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.news-section {
+  /* Replace 'news-bg.jpg' with your background image */
+  background: url('./assets//hero1-mobile.png') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+/* Form and Services */
+.tracking-form {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.tracking-input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #005f69;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.services {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.services li {
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+.services li a {
+  color: #005f69;
+  text-decoration: none;
+}
+
+.services li a:hover {
+  color: #ffd700;
+}
+
+/* Footer */
+.footer {
+  background: #1a2525; /* Dark teal-gray */
+  color: white;
+  padding: 32px 0;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #ffd700;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color: #ffd700;
+}
+
+.footer-bottom {
+  flex: 100%;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+  font-size: 28px;
+  color: #005f69;
+  margin-bottom: 16px;
+}
+
+.popup-content p {
+  margin-bottom: 16px;
+}
+
+.browser-list {
+  list-style: disc;
+  padding-left: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.popup-checkbox {
+  display: block;
+  margin-top: 20px;
+}
+
+.popup-checkbox input {
+  margin-right: 8px;
+}

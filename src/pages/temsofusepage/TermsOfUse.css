@@ -1,0 +1,110 @@
+.terms-document {
+  min-height: 100vh;
+  background: #ffffff;
+  padding-top: 72px;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+}
+
+.document-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.document-header h1 {
+  font-size: 2.5rem;
+  color: #003d44;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.header-info {
+  font-size: 1rem;
+  color: #666;
+}
+
+.header-info p {
+  margin: 0.25rem 0;
+}
+
+.document-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.document-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #005f69;
+  background: #f9f9f9;
+}
+
+.document-section h2 {
+  font-size: 1.5rem;
+  color: #005f69;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.document-section p {
+  text-align: justify;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.document-section ul {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+  color: #333;
+}
+
+.document-section li {
+  margin-bottom: 0.5rem;
+  text-align: justify;
+}
+
+.document-footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid #e0e0e0;
+  margin-top: 2rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .document-header h1 {
+    font-size: 2rem;
+  }
+
+  .document-section {
+    padding: 1rem;
+  }
+
+  .document-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .document-section p,
+  .document-section li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .document-header {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .document-content {
+    padding: 0 0.5rem;
+  }
+
+  .document-section {
+    border-left-width: 3px;
+  }
+}

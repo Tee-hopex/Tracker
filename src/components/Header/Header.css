@@ -1,0 +1,368 @@
+/* Base header styles - FIXED TO VIEWPORT TOP */
+.header {
+  background: linear-gradient(135deg, #005f69 0%, #007a85 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 95, 105, 0.3);
+  position: fixed; /* Changed from sticky to fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Transparent header on scroll */
+.header-transparent {
+  background: linear-gradient(135deg, rgba(0, 95, 105, 0.4) 0%, rgba(0, 122, 133, 0.4) 100%); /* 40% opacity */
+  transform: scale(0.98); /* Subtle shrink effect */
+  opacity: 0.9; /* Slight fade */
+}
+
+/* Desktop Header Styles */
+.desktop-header {
+  display: block;
+}
+
+.desktop-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.desktop-header .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.desktop-header .logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.desktop-header .logo-subtitle {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.desktop-header .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.desktop-header .nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.desktop-header .nav-list li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.desktop-header .nav-list li a:hover::before {
+  left: 100%;
+}
+
+.desktop-header .nav-list li a:hover {
+  color: #ffd700;
+  transform: translateY(-2px);
+}
+
+.desktop-header .login-btn {
+  background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
+  color: #005f69 !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 25px !important;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease !important;
+}
+
+.desktop-header .login-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4) !important;
+  color: #003d44 !important;
+}
+
+.desktop-header .login-btn:hover::before {
+  display: none;
+}
+
+/* Mobile Header Styles */
+.mobile-header {
+  display: none;
+}
+
+.mobile-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.mobile-header .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.mobile-header .logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mobile-header .logo-subtitle {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.mobile-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  position: relative;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 2px 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  border-radius: 2px;
+}
+
+/* Hamburger animation when active */
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Navigation Menu - ALSO FIXED TO VIEWPORT */
+.mobile-nav {
+  position: fixed; /* Fixed to viewport */
+  top: 70px; /* Below the fixed header */
+  left: 0;
+  right: 0;
+  max-height: calc(100vh - 70px); /* Limit to viewport minus header */
+  background: linear-gradient(135deg, #005f69 0%, #007a85 100%);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 95, 105, 0.3);
+  display: flex; /* Use flex to manage content */
+  flex-direction: column;
+}
+
+.mobile-nav.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 2rem 0;
+  display: block; /* Ensure list is displayed */
+  flex: 1; /* Allow list to grow and fill space */
+}
+
+.mobile-nav .nav-list li {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav .nav-list li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav .nav-list li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav .nav-list li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd700;
+  padding-left: 2rem;
+}
+
+.mobile-nav .login-btn {
+  background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
+  color: #005f69 !important;
+  font-weight: 600 !important;
+  margin: 1.5rem 1.5rem !important;
+  padding: 1rem !important;
+  border-radius: 25px !important;
+  text-align: center !important;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease !important;
+  font-size: 1.1rem !important;
+}
+
+.mobile-nav .login-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4) !important;
+  padding-left: 1rem !important;
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 998;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Add padding to body to account for fixed header */
+body {
+  padding-top: 70px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .desktop-header {
+    display: none;
+  }
+  
+  .mobile-header {
+    display: block;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  body {
+    padding-top: 65px;
+  }
+  
+  .header {
+    height: 65px;
+  }
+  
+  .mobile-header .container {
+    padding: 0.75rem;
+    height: 65px;
+  }
+  
+  .mobile-header .logo-text {
+    font-size: 1.3rem;
+  }
+  
+  .mobile-header .logo-subtitle {
+    font-size: 0.6rem;
+  }
+  
+  .mobile-nav {
+    top: 65px;
+    max-height: calc(100vh - 65px);
+  }
+  
+  .mobile-nav .nav-list li a {
+    padding: 1rem;
+  }
+}
+
+/* Tablet adjustments for desktop view */
+@media (max-width: 992px) and (min-width: 769px) {
+  .desktop-header .nav-list {
+    gap: 1.5rem;
+  }
+  
+  .desktop-header .nav-list li a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .desktop-header .login-btn {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+
