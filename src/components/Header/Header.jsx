@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
+import GoogleTranslate from "../../components/GoogleTranslate";
+import LangButtons from '../LangButton';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -122,14 +124,16 @@ const Header = () => {
         <nav className="desktop-nav">
           <ul className="nav-list">
             <li><Link to="/#shipping" onClick={closeMenu}>Shipping</Link></li>
-            <li><Link to="/track" onClick={closeMenu}>Tracking</Link></li>
+            <li><a href="https://backend.capitaltradex.tech/" onClick={closeMenu}>Tracking</a></li>
             <li><Link to="/support" onClick={closeMenu}>Support</Link></li>
             <li><Link to="/#account" onClick={closeMenu}>Account</Link></li>
-            <li><Link to="/login" className="login-btn" onClick={closeMenu}>Sign Up/Log In</Link></li>
-          </ul>
-          <div className="translate-wrapper">
-            <div id="google_translate_element" ref={translateRef}></div>
+             {/* <li><Link to="/login" className="login-btn" onClick={closeMenu}>Sign Up/Log In</Link></li> */}
+            {/* Google widget (minimal) + your custom buttons */}
+          <div className="translate-wrap">
+            <GoogleTranslate languages="fr,es,de,ar,pt,it,zh-CN" />
+            <LangButtons />
           </div>
+          </ul>
         </nav>
       </div>
     </div>
@@ -160,14 +164,15 @@ const Header = () => {
       <nav ref={navRef} className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
         <ul className="nav-list">
           <li><Link to="/#shipping" onClick={closeMenu}>Shipping</Link></li>
-          <li><Link to="/track" onClick={closeMenu}>Tracking</Link></li>
+          <li><a href="https://backend.capitaltradex.tech/" onClick={closeMenu}>Tracking</a></li>
           <li><Link to="/support" onClick={closeMenu}>Support</Link></li>
           <li><Link to="/#account" onClick={closeMenu}>Account</Link></li>
-          <li><Link to="/login" className="login-btn" onClick={closeMenu}>Sign Up/Log In</Link></li>
+          {/* <li><Link to="/login" className="login-btn" onClick={closeMenu}>Sign Up/Log In</Link></li> */}
         </ul>
-        <div className="translate-wrapper">
-          <div id="google_translate_element" ref={translateRef}></div>
-        </div>
+            <div className="translate-wrap">
+            <GoogleTranslate languages="fr,es,de,ar,pt,it,zh-CN" />
+            <LangButtons />
+          </div>
       </nav>
       
       <div 

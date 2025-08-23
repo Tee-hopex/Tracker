@@ -235,7 +235,7 @@ const SupportPage = () => {
             </div>
           </div>
 
-          <div className="support-resources">
+          {/* <div className="support-resources">
             <h2>Self-Service Tools</h2>
             <div className="resources-grid">
               <button
@@ -261,7 +261,7 @@ const SupportPage = () => {
                 Full FAQ
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />

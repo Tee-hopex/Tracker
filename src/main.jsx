@@ -11,7 +11,7 @@ import SupportPage from './pages/supportpage/Supportpage.jsx';
 import QuotePage from './pages/quotepage/Quotepage.jsx';
 import PrivacyPolicy from './pages/privacypolicypage/Privacypolicy.jsx';
 import TermsOfUse from './pages/temsofusepage/TermsOfUse.jsx';
-// import './index.css'
+import './index.css'
 
 
 

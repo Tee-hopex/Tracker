@@ -35,12 +35,12 @@ const Welcome = ({ heroImage, mobileHeroImage }) => {
               <Link to="/quote" className="btn btn-primary">
                 <span>📊</span> Rate & Transit Times
               </Link>
-              <Link to="/track" className="btn btn-secondary">
+              <a href="https://backend.capitaltradex.tech/" className="btn btn-accent">
                 <span>📦</span> Track Package
-              </Link>
-              <Link to="/login" className="btn btn-accent">
+              </a>
+              {/* <Link to="/login" className="btn btn-accent">
                 <span>🚚</span> Ship Now
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
