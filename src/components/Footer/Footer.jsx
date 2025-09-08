@@ -53,7 +53,7 @@ const Footer = () => {
               </ul>
             </div>
             
-            <div className="footer-links">
+            {/* <div className="footer-links">
               <h3>New Customer</h3>
               <ul>
                 <li><a href="#" onClick={handlePlaceholderClick}>Open an Account</a></li>
@@ -61,9 +61,9 @@ const Footer = () => {
                 <li><a href="#" onClick={handlePlaceholderClick}>Getting Started Guide</a></li>
                 <li><a href="#" onClick={handlePlaceholderClick}>Customer Portal</a></li>
               </ul>
-            </div>
+            </div> */}
             
-            <div className="footer-links">
+            {/* <div className="footer-links">
               <h3>More From Lamlight Express</h3>
               <ul>
                 <li><a href="#" onClick={handlePlaceholderClick}>Fuel Surcharges</a></li>
@@ -72,7 +72,7 @@ const Footer = () => {
                 <li><a href="#" onClick={handlePlaceholderClick}>Developer API</a></li>
                 <li><a href="#" onClick={handlePlaceholderClick}>Mobile App</a></li>
               </ul>
-            </div>
+            </div> */}
             
             <div className="footer-section newsletter-section">
               <h3>Stay Updated</h3>

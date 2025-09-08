@@ -514,7 +514,7 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -539,6 +539,37 @@ const Homepage = () => {
   const navigateSupport = () => {
     navigate('/support');
   };
+
+  useEffect(() => {
+    // Avoid re-injecting the widget if it's already present
+    if (window._smartsupp) return;
+
+    window._smartsupp = window._smartsupp || {};
+    window._smartsupp.key = "db35a7ec3a4bfa2cef08cc9d0c9f6dde4f19a955";
+
+    // Set your desired widget color here—this must come before the script loads
+    window._smartsupp.color = "#006a74";  //  Your custom color :contentReference[oaicite:0]{index=0}
+
+    // Inject the Smartsupp widget script
+    (function(d) {
+      var s, c, o;
+      o = function () {
+        o._.push(arguments);
+      };
+      o._ = [];
+      window.smartsupp = o;
+
+      s = d.getElementsByTagName("script")[0];
+      c = d.createElement("script");
+      c.type = "text/javascript";
+      c.charset = "utf-8";
+      c.async = true;
+      c.src = "https://www.smartsuppchat.com/loader.js?";
+      s.parentNode.insertBefore(c, s);
+    })(document);
+
+  }, []);
+
 
   // Dummy data for testing (uncomment for local testing when API is unavailable)
   const dummyShipmentData = {
@@ -1225,7 +1256,12 @@ const Homepage = () => {
           </div>
         )}
       </div>
+  
+        
+
+
       <Footer />
+      
     </>
   );
 };
