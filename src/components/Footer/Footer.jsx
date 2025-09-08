@@ -7,6 +7,11 @@ import instagram from '../../assets/images/instagram_icon.png';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  // Prevent default navigation for placeholder links
+  const handlePlaceholderClick = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <footer className="footer">
       <div className="footer-wave">
@@ -22,7 +27,7 @@ const Footer = () => {
           <div className="footer-grid">
             <div className="footer-section company-section">
               <div className="footer-logo">
-                <span className="footer-logo-text">Lamlight-Grp</span>
+                <span className="footer-logo-text">Lamlight Express</span>
                 <span className="footer-logo-subtitle">Connecting the World</span>
               </div>
               <p className="company-description">
@@ -30,42 +35,42 @@ const Footer = () => {
                 across continents with reliability, speed, and care.
               </p>
               <div className="social-links">
-                <a href="#" aria-label="Facebook"><img src={facebook} alt="" height={40} width={'auto'} /></a>
-                <a href="#" aria-label="Twitter"><img src={x} alt="" height={40} width={'auto'} /></a>
-                <a href="#" aria-label="LinkedIn"><img src={linkedin} alt="" height={40} width={'auto'} /></a>
-                <a href="#" aria-label="Instagram"><img src={instagram} alt="" height={40} width={'auto'} /></a>
+                <a href="#" onClick={handlePlaceholderClick} aria-label="Facebook"><img src={facebook} alt="" height={40} width={'auto'} /></a>
+                <a href="#" onClick={handlePlaceholderClick} aria-label="Twitter"><img src={x} alt="" height={40} width={'auto'} /></a>
+                <a href="#" onClick={handlePlaceholderClick} aria-label="LinkedIn"><img src={linkedin} alt="" height={40} width={'auto'} /></a>
+                <a href="#" onClick={handlePlaceholderClick} aria-label="Instagram"><img src={instagram} alt="" height={40} width={'auto'} /></a>
               </div>
             </div>
             
             <div className="footer-links">
               <h3>Our Company</h3>
               <ul>
-                <li><a href="#">About Lamlight-Grp</a></li>
-                <li><a href="#">Investor Relations</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">International Holiday Schedule</a></li>
-                <li><a href="#">Sustainability</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>About Lamlight Express</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Investor Relations</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Careers</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>International Holiday Schedule</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Sustainability</a></li>
               </ul>
             </div>
             
             <div className="footer-links">
               <h3>New Customer</h3>
               <ul>
-                <li><a href="#">Open an Account</a></li>
-                <li><a href="#">New Customer Center</a></li>
-                <li><a href="#">Getting Started Guide</a></li>
-                <li><a href="#">Customer Portal</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Open an Account</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>New Customer Center</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Getting Started Guide</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Customer Portal</a></li>
               </ul>
             </div>
             
             <div className="footer-links">
-              <h3>More From Lamlight-Grp</h3>
+              <h3>More From Lamlight Express</h3>
               <ul>
-                <li><a href="#">Fuel Surcharges</a></li>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Lamlight-Grp Locations</a></li>
-                <li><a href="#">Developer API</a></li>
-                <li><a href="#">Mobile App</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Fuel Surcharges</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Resources</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Lamlight Express Locations</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Developer API</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Mobile App</a></li>
               </ul>
             </div>
             
@@ -85,12 +90,12 @@ const Footer = () => {
           
           <div className="footer-bottom">
             <div className="footer-bottom-content">
-              <p>&copy; 2025 Lamlight-Grp. All rights reserved.</p>
+              <p>&copy; 2025 Lamlight Express. All rights reserved.</p>
               <ul className="legal-links">
                 <li><Link to="/terms">Terms of Use</Link></li>
                 <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-                <li><a href="#">Security</a></li>
-                <li><a href="#">Cookies</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Security</a></li>
+                <li><a href="#" onClick={handlePlaceholderClick}>Cookies</a></li>
               </ul>
             </div>
           </div>

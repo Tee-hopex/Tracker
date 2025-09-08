@@ -86,7 +86,7 @@ const Login = () => {
           <div className="login-branding">
             <div className="brand-content">
               <div className="brand-logo">
-                <span className="brand-logo-text">Lamlight-Grp</span>
+                <span className="brand-logo-text">Lamlight Express</span>
                 <span className="brand-logo-subtitle">Global Shipping Solutions</span>
               </div>
               <h1>Welcome Back!</h1>

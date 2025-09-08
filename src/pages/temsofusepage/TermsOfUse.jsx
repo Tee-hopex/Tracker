@@ -11,7 +11,7 @@ const TermsOfUse = () => {
         <div className="document-header">
           <h1>Terms of Use</h1>
           <div className="header-info">
-            <p>Lamlight-Grp Global Shipping Solutions</p>
+            <p>Lamlight Express Global Shipping Solutions</p>
             <p>Effective Date: August 15, 2025</p>
             <p>Last Updated: August 15, 2025</p>
           </div>
@@ -20,7 +20,7 @@ const TermsOfUse = () => {
         <div className="document-content">
           <section className="document-section">
             <h2>1. Acceptance of Terms</h2>
-            <p>By accessing or using the Lamlight-Grp website, mobile applications, or shipping services, you agree to be bound by these Terms of Use. If you do not agree, please do not use our services.</p>
+            <p>By accessing or using the Lamlight Express website, mobile applications, or shipping services, you agree to be bound by these Terms of Use. If you do not agree, please do not use our services.</p>
           </section>
 
           <section className="document-section">
@@ -46,12 +46,12 @@ const TermsOfUse = () => {
 
           <section className="document-section">
             <h2>4. Liability</h2>
-            <p>Lamlight-Grp is not liable for delays, loss, or damage beyond our control (e.g., natural disasters). Our liability is limited to the value of the shipment or the amount specified in our insurance policy, whichever is lower.</p>
+            <p>Lamlight Express is not liable for delays, loss, or damage beyond our control (e.g., natural disasters). Our liability is limited to the value of the shipment or the amount specified in our insurance policy, whichever is lower.</p>
           </section>
 
           <section className="document-section">
             <h2>5. Intellectual Property</h2>
-            <p>All content, trademarks, and logos on our platform are owned by Lamlight-Grp or its licensors. You may not reproduce or distribute them without permission.</p>
+            <p>All content, trademarks, and logos on our platform are owned by Lamlight Express or its licensors. You may not reproduce or distribute them without permission.</p>
           </section>
 
           <section className="document-section">
@@ -71,12 +71,12 @@ const TermsOfUse = () => {
 
           <section className="document-section">
             <h2>9. Contact Us</h2>
-            <p>Email: support@lamlight-grp.com</p>
+            <p>Email: support@Lamlight Express.com</p>
           </section>
         </div>
 
         <div className="document-footer">
-          <p>&copy; 2025 Lamlight-Grp. All rights reserved.</p>
+          <p>&copy; 2025 Lamlight Express. All rights reserved.</p>
           <p>Last Updated: August 15, 2025</p>
         </div>
       </div>

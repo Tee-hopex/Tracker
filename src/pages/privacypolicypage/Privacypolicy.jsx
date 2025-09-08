@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
         <div className="document-header">
           <h1>Privacy Policy</h1>
           <div className="header-info">
-            <p>Lamlight-Grp Global Shipping Solutions</p>
+            <p>Lamlight Express Global Shipping Solutions</p>
             <p>Effective Date: August 15, 2025</p>
             <p>Last Updated: August 15, 2025</p>
           </div>
@@ -109,12 +109,12 @@ const PrivacyPolicy = () => {
 
           <section className="document-section">
             <h2>11. Contact Us</h2>
-            <p>Email: privacy@lamlight-grp.com</p>
+            <p>Email: privacy@Lamlight Express.com</p>
           </section>
         </div>
 
         <div className="document-footer">
-          <p>&copy; 2025 Lamlight-Grp. All rights reserved.</p>
+          <p>&copy; 2025 Lamlight Express. All rights reserved.</p>
           <p>Last Updated: August 15, 2025</p>
         </div>
       </div>

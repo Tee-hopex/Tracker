@@ -49,7 +49,7 @@ const SupportPage = () => {
       },
       {
         question: 'What if I have a billing dispute?',
-        answer: 'Submit a dispute form in your account or email billing@lamlight-grp.com.',
+        answer: 'Submit a dispute form in your account or email billing@Lamlight Express.com.',
       },
       {
         question: 'How can I get a copy of my invoice?',
@@ -221,13 +221,13 @@ const SupportPage = () => {
               <div className="contact-card">
                 <div className="contact-icon">✉️</div>
                 <h3>Email Support</h3>
-                <p>support@lamlight-grp.com</p>
+                <p>support@Lamlight Express.com</p>
                 <p>Replies within 24-48 hours.</p>
               </div>
               {/* <div className="contact-card">
                 <div className="contact-icon">📍</div>
                 <h3>In-Person Support</h3>
-                <p>Visit a Lamlight-Grp location near you.</p>
+                <p>Visit a Lamlight Express location near you.</p>
                 <a href="#" className="location-link">
                   Find a Location
                 </a>

@@ -35,7 +35,7 @@ const App = () => {
       {/* Header */}
       <header className="header">
         <div className="container">
-          <div className="logo">Lamlight-Grp</div>
+          <div className="logo">Lamlight Express</div>
           <nav>
             <ul className="nav-list">
               <li><a href="#shipping">Shipping</a></li>
@@ -51,7 +51,7 @@ const App = () => {
       {/* Hero Section */}
       <section id="welcome" className="hero">
         <div className="container">
-          <h1>Welcome to Lamlight-Grp</h1>
+          <h1>Welcome to Lamlight Express</h1>
           <div className="cta-buttons">
             <a href="#rates" className="btn">Rate & Transit Times</a>
             <a href="#track" className="btn">Track</a>
@@ -121,7 +121,7 @@ const App = () => {
         <div className="container">
           <h2>Account</h2>
           <ul className="services">
-            <li><a href="#">Lamlight-Grp Administration</a></li>
+            <li><a href="#">Lamlight Express Administration</a></li>
             <li><a href="#">My Profile</a></li>
             <li><a href="#">Address Book</a></li>
             <li><a href="#">Billing, Invoicing & Payment</a></li>
@@ -134,11 +134,11 @@ const App = () => {
       {/* News Section */}
       <section id="news" className="section news-section">
         <div className="container">
-          <h2>Lamlight-Grp News</h2>
+          <h2>Lamlight Express News</h2>
           <ul className="services">
             <li>Online Fraud Alert</li>
             <li>Implementation of 12-digit HS Code for Import/Export Shipments | Posted on July 30, 2025</li>
-            <li>Lamlight-Grp service resumes to select regions | Posted on July 18, 2025</li>
+            <li>Lamlight Express service resumes to select regions | Posted on July 18, 2025</li>
             <li><a href="#">View All News</a></li>
           </ul>
         </div>
@@ -150,7 +150,7 @@ const App = () => {
           <div className="footer-links">
             <h3>Our Company</h3>
             <ul>
-              <li><a href="#">About Lamlight-Grp</a></li>
+              <li><a href="#">About Lamlight Express</a></li>
               <li><a href="#">Investor Relations</a></li>
               <li><a href="#">Careers</a></li>
               <li><a href="#">International Holiday Schedule</a></li>
@@ -164,15 +164,15 @@ const App = () => {
             </ul>
           </div>
           <div className="footer-links">
-            <h3>More From Lamlight-Grp</h3>
+            <h3>More From Lamlight Express</h3>
             <ul>
               <li><a href="#">Fuel Surcharges</a></li>
               <li><a href="#">Resources</a></li>
-              <li><a href="#">Lamlight-Grp Locations</a></li>
+              <li><a href="#">Lamlight Express Locations</a></li>
             </ul>
           </div>
           <div className="footer-bottom">
-            <p>© Lamlight-Grp 2025</p>
+            <p>© Lamlight Express 2025</p>
             <ul>
               <li><a href="#">Terms of Use</a></li>
               <li><a href="#">Security and Privacy</a></li>

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
@@ -10,16 +11,16 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef(null);
   const toggleRef = useRef(null);
-  const translateRef = useRef(null); // Ref for translate element
+  const translateRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Handle window resize
+  const languages = 'fr,es,de,ar,pt,it,zh-CN,zh-TW,ms';
+
   useEffect(() => {
     const handleResize = () => {
       const mobile = window.innerWidth <= 768;
       setIsMobile(mobile);
-      
       if (!mobile && isMenuOpen) {
         setIsMenuOpen(false);
       }
@@ -29,7 +30,6 @@ const Header = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen]);
 
-  // Handle scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -39,28 +39,23 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Toggle mobile menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Navigate to home when logo is clicked
   const navigateHome = () => {
     navigate('/');
     setIsMenuOpen(false);
   };
 
-  // Close menu with delay to allow navigation
   const closeMenu = useCallback(() => {
     setTimeout(() => setIsMenuOpen(false), 100);
   }, []);
 
-  // Close menu when clicking outside
   const handleOverlayClick = () => {
     setIsMenuOpen(false);
   };
 
-  // Close menu on escape key
   useEffect(() => {
     const handleEscKey = (event) => {
       if (event.key === 'Escape' && isMenuOpen) {
@@ -72,7 +67,6 @@ const Header = () => {
     return () => document.removeEventListener('keydown', handleEscKey);
   }, [isMenuOpen]);
 
-  // Close menu when clicking outside nav or toggle
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isMenuOpen && navRef.current && toggleRef.current) {
@@ -89,7 +83,6 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isMenuOpen]);
 
-  // Scroll to section when hash changes
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
@@ -100,37 +93,36 @@ const Header = () => {
     }
   }, [location]);
 
-  // Reinitialize Google Translate when mobile menu opens
   useEffect(() => {
-    if (isMenuOpen && window.google && window.google.translate) {
-      if (translateRef.current) {
-        window.google.translate.TranslateElement(
-          { pageLanguage: 'en', includedLanguages: 'en,fr,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
-          translateRef.current
-        );
-      }
+    if (isMenuOpen && window.google && window.google.translate && translateRef.current) {
+      window.google.translate.TranslateElement(
+        { 
+          pageLanguage: 'en', 
+          includedLanguages: languages, 
+          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE 
+        },
+        translateRef.current
+      );
     }
-  }, [isMenuOpen]);
+  }, [isMenuOpen, languages]);
 
-  // Desktop Header Component
   const DesktopHeader = () => (
     <div className="desktop-header">
       <div className="container">
         <div onClick={navigateHome} className="logo">
-          <span className="logo-text">Lamlight-Grp</span>
+          <span className="logo-text">Lamlight Express</span>
           <span className="logo-subtitle">Global Shipping Solutions</span>
         </div>
         
         <nav className="desktop-nav">
           <ul className="nav-list">
             <li><Link to="/#shipping" onClick={closeMenu}>Shipping</Link></li>
-            <li><a href="https://backend.capitaltradex.tech/" onClick={closeMenu}>Tracking</a></li>
+            {/* <li><a href="https://tracking.lamlights.com/" onClick={closeMenu}>Tracking</a></li> */}
+            <li><Link to="/#quick-track" onClick={closeMenu}>Tracking</Link></li>
             <li><Link to="/support" onClick={closeMenu}>Support</Link></li>
             <li><Link to="/#account" onClick={closeMenu}>Account</Link></li>
-             {/* <li><Link to="/login" className="login-btn" onClick={closeMenu}>Sign Up/Log In</Link></li> */}
-            {/* Google widget (minimal) + your custom buttons */}
           <div className="translate-wrap">
-            <GoogleTranslate languages="fr,es,de,ar,pt,it,zh-CN" />
+            <GoogleTranslate languages={languages} />
             <LangButtons />
           </div>
           </ul>
@@ -139,12 +131,11 @@ const Header = () => {
     </div>
   );
 
-  // Mobile Header Component
   const MobileHeader = () => (
     <div className="mobile-header">
       <div className="container">
         <div onClick={navigateHome} className="logo">
-          <span className="logo-text">Lamlight-Grp</span>
+          <span className="logo-text">Lamlight Express</span>
           <span className="logo-subtitle">Global Shipping Solutions</span>
         </div>
         
@@ -164,15 +155,15 @@ const Header = () => {
       <nav ref={navRef} className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
         <ul className="nav-list">
           <li><Link to="/#shipping" onClick={closeMenu}>Shipping</Link></li>
-          <li><a href="https://backend.capitaltradex.tech/" onClick={closeMenu}>Tracking</a></li>
+          {/* <li><a href="https://tracking.lamlights.com/" onClick={closeMenu}>Tracking</a></li> */}
+          <li><a href="/#quick-track" onClick={closeMenu}>Tracking</a></li>
           <li><Link to="/support" onClick={closeMenu}>Support</Link></li>
           <li><Link to="/#account" onClick={closeMenu}>Account</Link></li>
-          {/* <li><Link to="/login" className="login-btn" onClick={closeMenu}>Sign Up/Log In</Link></li> */}
         </ul>
-            <div className="translate-wrap">
-            <GoogleTranslate languages="fr,es,de,ar,pt,it,zh-CN" />
-            <LangButtons />
-          </div>
+        <div className="translate-wrap">
+          <GoogleTranslate ref={translateRef} languages={languages} />
+          <LangButtons />
+        </div>
       </nav>
       
       <div 
